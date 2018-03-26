@@ -5,6 +5,9 @@ var app = express();
 const mongoUrl = 'mongodb://dbmaster:dbmaster1620@ds113179.mlab.com:13179/urlshort';
 const appUrl = 'https://still-caverns-95817.herokuapp.com/';
 
+app.get('/', (req,res)=>{
+	res.json({err: 'Please use: https://still-caverns-95817.herokuapp.com/<Your URL goes here>'})
+})
 app.get('/new/:newUrl(*)', (req,res)=>{
 	var newUrl = req.params.newUrl;
 	if(valid.isUri(newUrl)){
