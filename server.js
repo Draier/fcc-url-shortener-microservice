@@ -6,7 +6,7 @@ const mongoUrl = 'mongodb://dbmaster:dbmaster1620@ds113179.mlab.com:13179/urlsho
 const appUrl = 'https://still-caverns-95817.herokuapp.com/';
 
 app.get('/', (req,res)=>{
-	res.json({err: 'Please use: https://still-caverns-95817.herokuapp.com/<Your URL goes here>'})
+	res.json({err: 'Please use: https://still-caverns-95817.herokuapp.com/new/<YourURLgoeshere>'})
 })
 app.get('/new/:newUrl(*)', (req,res)=>{
 	var newUrl = req.params.newUrl;
