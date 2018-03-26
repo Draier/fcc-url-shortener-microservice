@@ -3,7 +3,7 @@ const express = require('express');
 const valid = require('valid-url');
 var app = express();
 const mongoUrl = 'mongodb://dbmaster:dbmaster1620@ds113179.mlab.com:13179/urlshort';
-const appUrl = '';
+const appUrl = 'https://still-caverns-95817.herokuapp.com/';
 
 app.get('/new/:newUrl(*)', (req,res)=>{
 	var newUrl = req.params.newUrl;
